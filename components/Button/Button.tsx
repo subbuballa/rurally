@@ -24,9 +24,9 @@ interface Props
 const getColor = (type: Button_Type) => {
   switch (type) {
     case Button_Type.Primary:
-      return "bg-white text-indigo-600 hover:bg-gray-100";
+      return "bg-white text-blue-600 hover:bg-gray-100";
     case Button_Type.Secondary:
-      return "bg-indigo-500  hover:bg-indigo-700";
+      return "bg-blue-500  hover:bg-indigo-700";
     case Button_Type.Info:
       return "bg-blue-500 hover:bg-blue-700";
     case Button_Type.Success:

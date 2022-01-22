@@ -15,6 +15,16 @@ export interface Bank {
   updatedAt: Date;
 }
 
+export interface Campaign {
+  _id: string;
+  name: string;
+  descrition: string;
+  remainingDays: number;
+  currentAmountRaised: number;
+  image: string;
+  fundingPercent: number;
+}
+
 export interface Balance {
   currency: string;
   available: number;

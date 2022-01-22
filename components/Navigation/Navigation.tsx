@@ -8,8 +8,13 @@ import { useSensitive } from "components/ContextWrapper/ContextWrapper";
 const PAGES = [
   {
     path: "/",
-    title: "Home",
+    title: "Rurally",
     description: "Home page",
+  },
+  {
+    path: "/campaigns",
+    title: "Campaigns",
+    description: "Campaign page",
   },
 ];
 
@@ -20,21 +25,15 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full flex justify-between p-4 bg-indigo-700 text-white z-50">
+      <nav className="fixed top-0 w-full flex justify-between p-4 bg-blue-500 text-white z-50">
         <div>
           {PAGES.map((page) => (
             <Link href={page.path} key={page.path}>
-              <a className="font-bold text-md">{page.title}</a>
+              <a className="font-bold text-md m-4">{page.title}</a>
             </Link>
           ))}
         </div>
         <div className="flex flex-row">
-          <Button
-            className="-m-2 mr-4"
-            variant={Button_Type.Primary}
-            icon={<EyeOffIcon />}
-            onClick={() => setSensitive(!sensitive)}
-          />
           <Button
             className="-m-2"
             variant={Button_Type.Primary}
