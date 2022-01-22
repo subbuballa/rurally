@@ -35,10 +35,10 @@ export const CampaignCard: React.FunctionComponent<Props> = ({ campaigns }) => {
           </div> */}
         <div className="px-6 py-4">
             <Link href={campainUrl} key={campaign._id}>
-              <a className="font-bold text-xl mb-4 text-blue-500">{campaign.name}</a>
+              <a className="font-bold text-xl mb-4 text-blue-500 underline">{campaign.name}</a>
             </Link>
             {/* <div className="font-bold text-xl mb-2 text-blue-500">{campaign.name}</div> */}
-            <p className="text-gray-700 text-base">
+            <p className="text-ellipsis text-gray-700 text-base h-36 overflow-hidden">
             {campaign.descrition}
             </p>
             {

@@ -15,14 +15,13 @@ const Hero = () => {
                 </div>
                 <div className="flex w-full">
                 <div className="h-full w-full">
-                    {/* <Image
-                    src="/assets/agreement.jpg"
+                    <Image
+                    src="/assets/deal1.png"
                     alt="Rurally Connectors"
                     quality={100}
-                    width={300}
-                    height={300}
-                    layout="responsive"
-                    /> */}
+                    width={600}
+                    height={400}
+                    />
                 </div>
                 </div>
             </div>

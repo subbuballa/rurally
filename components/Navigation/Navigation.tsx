@@ -9,7 +9,7 @@ import Image from "next/image"
 const PAGES = [
   {
     path: "/",
-    title: "Home",
+    title: "Rur-ally",
     description: "Home page",
   },
   {

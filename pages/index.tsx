@@ -29,7 +29,7 @@ export default function Home() {
             You&lsquo;ve currently got £<Sensitive>{currentBalance}</Sensitive>
           </span> */}
           <span className="block text-gray-900">
-            Current active Campaigns
+            Active Campaigns
           </span>
         </h2>
       </div>
