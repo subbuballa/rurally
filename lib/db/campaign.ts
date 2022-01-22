@@ -8,7 +8,8 @@ var campaings: Array<Campaign> = [
         'remainingDays': 28,
         'currentAmountRaised': 96000,
         'image': '/assets/brewery.jpg',
-        'fundingPercent': 120
+        'fundingPercent': 120,
+        'hasControls': true
     },
     {
         '_id': '122',
@@ -17,7 +18,8 @@ var campaings: Array<Campaign> = [
         'remainingDays': 5,
         'currentAmountRaised': 15000,
         'image': '/assets/pizzaria.jpg',
-        'fundingPercent': 80
+        'fundingPercent': 80,
+        'hasControls': true
     },
     {
         '_id': '123',
@@ -26,7 +28,8 @@ var campaings: Array<Campaign> = [
         'remainingDays': 16,
         'currentAmountRaised': 20000,
         'image': '/assets/bakery.jpg',
-        'fundingPercent': 75
+        'fundingPercent': 75,
+        'hasControls': true
     }
 ]
 
