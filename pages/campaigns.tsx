@@ -15,7 +15,7 @@ export default function Campaigns() {
   const router = useRouter();
 
   const { isLoading, data } = useQuery<Campaign[]>("campaings", () =>
-    fetch("http://localhost:4000/api/campaigns").then((res) => res.json())
+    fetch("https://api.jsonbin.io/b/61ec5d2f3282972ff680aab3").then((res) => res.json())
   );
 
   const campaigns = data; //&& mapBanksToAccounts(data);
