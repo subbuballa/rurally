@@ -8,7 +8,7 @@ interface Props {
 }
 export const CampaignCard: React.FunctionComponent<Props> = ({ campaigns }) => {
   return (
-    <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-5 sm:py-5">
+    <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 py-5 sm:py-5">
       {campaigns.map((campaign) => {
           var percent_style = {
               'width': (campaign.fundingPercent > 100 ? 100 : campaign.fundingPercent) + "%"
@@ -35,15 +35,19 @@ export const CampaignCard: React.FunctionComponent<Props> = ({ campaigns }) => {
             <p className="text-gray-700 text-base">
             {campaign.descrition}
             </p>
-            <div className="mt-6 flex text-blue-600">
-                <div className="w-1/2 text-center text-sm"><div className="text-sm"><strong className="w-full">{campaign.remainingDays}</strong></div> remaining</div>
-                <div></div>
-                <div className="w-1/2 text-center text-sm"><div><strong className="w-full">${campaign.currentAmountRaised}</strong></div> received</div>
-            </div>
-            <div className="w-full bg-gray-200 h-1 mt-4">
-                <div className="bg-blue-600 h-1" style={percent_style}></div>
-            </div>
-            <div className="mt-1 text-sm text-center text-blue-500">{campaign.fundingPercent}% financed</div>
+            {
+            campaign.hasControls && 
+            <div>
+              <div className="mt-6 flex text-blue-600">
+                  <div className="w-1/2 text-center text-sm"><div className="text-sm"><strong className="w-full">{campaign.remainingDays}</strong></div> remaining</div>
+                  <div></div>
+                  <div className="w-1/2 text-center text-sm"><div><strong className="w-full">${campaign.currentAmountRaised}</strong></div> received</div>
+              </div>
+              <div className="w-full bg-gray-200 h-1 mt-4">
+                  <div className="bg-blue-600 h-1" style={percent_style}></div>
+              </div>
+              <div className="mt-1 text-sm text-center text-blue-500">{campaign.fundingPercent}% financed</div>
+            </div>}
         </div>
         {/* <div className="px-6 pt-4 pb-2">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>

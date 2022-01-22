@@ -23,6 +23,7 @@ export interface Campaign {
   currentAmountRaised: number;
   image: string;
   fundingPercent: number;
+  hasControls: boolean;
 }
 
 export interface Balance {

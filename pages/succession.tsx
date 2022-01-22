@@ -9,13 +9,13 @@ import { useQuery } from "react-query";
 import { Campaign } from "types/global";
 import { Loading } from "components/Loading/Loading";
 
-export default function Campaigns() {
+export default function BusinessSuccession() {
   const [session, loading] = useSession();
 
   const router = useRouter();
 
   const { isLoading, data } = useQuery<Campaign[]>("campaings", () =>
-    fetch("https://api.jsonbin.io/b/61ec5d2f3282972ff680aab3/5").then((res) => res.json())
+    fetch("https://api.jsonbin.io/b/61ec5d2f3282972ff680aab3").then((res) => res.json())
   );
 
   const campaigns = data; //&& mapBanksToAccounts(data);
@@ -23,8 +23,7 @@ export default function Campaigns() {
   return (
     <Page>
       <div className="py-10">
-        {isLoading && <Loading />}
-        {campaigns && <CampaignCard campaigns={campaigns} />}
+        Business suceession
       </div>
     </Page>
   );

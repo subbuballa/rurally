@@ -4,17 +4,23 @@ import { EyeOffIcon } from "@heroicons/react/outline";
 import React from "react";
 import { Button, Button_Type } from "components/Button/Button";
 import { useSensitive } from "components/ContextWrapper/ContextWrapper";
+import Image from "next/image"
 
 const PAGES = [
   {
     path: "/",
-    title: "Rurally",
+    title: "Home",
     description: "Home page",
   },
   {
     path: "/campaigns",
     title: "Campaigns",
     description: "Campaign page",
+  },
+  {
+    path: "/about",
+    title: "About",
+    description: "About us",
   },
 ];
 
@@ -26,6 +32,9 @@ const Navigation = () => {
   return (
     <>
       <nav className="fixed top-0 w-full flex justify-between p-4 bg-blue-500 text-white z-50">
+      {/* <Image src='/assets/rurally.png' alt="Mountain" width={50}
+                    height={20}
+                    layout="responsive"></Image> */}
         <div>
           {PAGES.map((page) => (
             <Link href={page.path} key={page.path}>

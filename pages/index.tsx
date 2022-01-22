@@ -14,7 +14,7 @@ import Hero from "components/Hero/Hero";
 
 export default function Home() {
   const { isLoading, data } = useQuery<Campaign[]>("campaings", () =>
-    fetch("http://localhost:4000/api/campaigns").then((res) => res.json())
+    fetch("https://api.jsonbin.io/b/61ec5d2f3282972ff680aab3/5").then((res) => res.json())
   );
 
   const campaigns = data; //&& mapBanksToAccounts(data);
