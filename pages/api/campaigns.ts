@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { checkBankBalanceAndUpdate, createBank, getBanks } from "lib/db/bank";
 import { getCampaings } from "lib/db/campaign";
 
 export default async function handler(

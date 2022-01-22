@@ -2,7 +2,7 @@ import { Sensitive } from "components/Sensitive/Sensitive";
 import moment from "moment";
 import React from "react";
 import { Account, Campaign } from "types/global";
-
+import Image from 'next/image'
 interface Props {
   campaigns: Campaign[];
 }
@@ -18,7 +18,9 @@ export const CampaignCard: React.FunctionComponent<Props> = ({ campaigns }) => {
           key={campaign._id}
           className="max-w-sm rounded overflow-hidden shadow-lg ml-4"
         >
-        <img className="w-full h-72" src={campaign.image} alt="Mountain"/>
+        <Image src={campaign.image} alt="Mountain" width={300}
+                    height={200}
+                    layout="responsive"></Image>
           {/* <div className="mr-6">
             <img
               src={campaign.image}

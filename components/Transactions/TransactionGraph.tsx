@@ -37,10 +37,10 @@ const mapTransactionsToSeries = (
   return output;
 };
 
-const accessors = {
-  xAccessor: (d) => d.x,
-  yAccessor: (d) => d.y,
-};
+// const accessors = {
+//   xAccessor: (d) => d.x,
+//   yAccessor: (d) => d.y,
+// };
 
 export const TransactionGraph: React.FunctionComponent = () => {
   const { isLoading: isBanksLoading, data: banksData } = useQuery<Bank[]>(
@@ -66,7 +66,7 @@ export const TransactionGraph: React.FunctionComponent = () => {
         <AnimatedAxis orientation="right" />
       </Sensitive>
       <AnimatedGrid columns={false} numTicks={5} />
-      {seriesData && (
+      {/* {seriesData && (
         <AnimatedAreaSeries
           key={"Accounts"}
           dataKey={"Accounts"}
@@ -75,25 +75,25 @@ export const TransactionGraph: React.FunctionComponent = () => {
           lineProps={{
             stroke: "rgb(99, 102, 241)",
           }}
-          {...accessors}
+          // {...accessors}
         />
-      )}
-      <Tooltip
+      )} */}
+      {/* <Tooltip
         snapTooltipToDatumX
         snapTooltipToDatumY
         showVerticalCrosshair
         showSeriesGlyphs
         showHorizontalCrosshair
-        renderTooltip={({ tooltipData, colorScale }) => (
-          <div>
-            <div style={{ color: colorScale(tooltipData.nearestDatum.key) }}>
-              {tooltipData.nearestDatum.key}
-            </div>
-            {accessors.xAccessor(tooltipData.nearestDatum.datum)}
-            {", "}£{accessors.yAccessor(tooltipData.nearestDatum.datum)}
-          </div>
-        )}
-      />
+        // renderTooltip={({ tooltipData, colorScale }) => (
+        //   // <div>
+        //   //   <div style={{ color: colorScale(tooltipData.nearestDatum.key) }}>
+        //   //     {tooltipData.nearestDatum.key}
+        //   //   </div>
+        //   //   {accessors.xAccessor(tooltipData.nearestDatum.datum)}
+        //   //   {", "}£{accessors.yAccessor(tooltipData.nearestDatum.datum)}
+        //   // </div>
+        // )}
+      /> */}
     </XYChart>
   );
 };

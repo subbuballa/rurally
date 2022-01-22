@@ -51,7 +51,7 @@ export const BankCard: React.FunctionComponent<Props> = ({ bank }) => {
             Balance: {account.balance?.current} @{" "}
             {moment(account.balance?.updatedAt).fromNow()}
           </p>
-          <img src={account.provider.logoUri} className="w-16" />
+          {/* <img src={account.provider.logoUri} className="w-16" /> */}
         </div>
       ))}
     </div>
