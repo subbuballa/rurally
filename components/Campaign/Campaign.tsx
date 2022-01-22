@@ -3,6 +3,8 @@ import moment from "moment";
 import React from "react";
 import { Account, Campaign } from "types/global";
 import Image from 'next/image'
+import Link from "next/link";
+
 interface Props {
   campaigns: Campaign[];
 }
@@ -13,6 +15,7 @@ export const CampaignCard: React.FunctionComponent<Props> = ({ campaigns }) => {
           var percent_style = {
               'width': (campaign.fundingPercent > 100 ? 100 : campaign.fundingPercent) + "%"
           }
+          var campainUrl = `campaign?id=${campaign._id}`
           return (
         <div
           key={campaign._id}
@@ -31,7 +34,10 @@ export const CampaignCard: React.FunctionComponent<Props> = ({ campaigns }) => {
             ></img>
           </div> */}
         <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2 text-blue-500">{campaign.name}</div>
+            <Link href={campainUrl} key={campaign._id}>
+              <a className="font-bold text-xl mb-4 text-blue-500">{campaign.name}</a>
+            </Link>
+            {/* <div className="font-bold text-xl mb-2 text-blue-500">{campaign.name}</div> */}
             <p className="text-gray-700 text-base">
             {campaign.descrition}
             </p>
